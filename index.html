@@ -1,138 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nirmal Enterprises - Construction</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nirmal Enterprise</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
     }
+    body {
+        background: #0d0d0d;
+        color: #fff;
+    }
+
+    /* HEADER */
     header {
-      background: #000;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
+        text-align: center;
+        padding: 25px 10px;
+        background: #000;
+        border-bottom: 3px solid #f1c40f;
     }
     header img {
-      height: 60px;
+        width: 140px;
     }
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
+    header h1 {
+        margin-top: 10px;
+        font-size: 32px;
+        color: #f1c40f;
     }
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
+    header p {
+        font-size: 18px;
+        opacity: 0.8;
     }
-    .slide.active {
-      opacity: 1;
+
+    /* NAV */
+    nav {
+        background: #111;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 2px solid #f1c40f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
-    .services {
-      padding: 60px 30px;
-      background: #fff;
-      text-align: center;
+    nav a {
+        margin: 0 18px;
+        color: #f1c40f;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
     }
-    .services h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    nav a:hover {
+        color: white;
     }
-    .service-boxes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    /* SECTION TITLES */
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        color: #f1c40f;
+        text-transform: uppercase;
     }
-    .box {
-      background: #000;
-      color: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      transition: transform 0.3s;
+
+    /* ABOUT */
+    .about {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 1.6;
+        text-align: center;
     }
-    .box:hover {
-      transform: translateY(-10px);
-      background: #ffcc00;
-      color: #000;
+
+    /* SERVICES */
+    .services-list {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 1.8;
+        text-align: center;
     }
-    .contact {
-      padding: 50px;
-      background: #111;
-      color: #fff;
-      text-align: center;
+
+    /* GALLERY */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
     }
-    .contact input, .contact textarea {
-      width: 80%;
-      padding: 12px;
-      margin: 10px;
-      border-radius: 8px;
-      border: none;
+    .gallery-grid img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 3px solid #f1c40f;
+        cursor: pointer;
+        transition: 0.3s;
     }
-    .contact button {
-      padding: 12px 24px;
-      background: #ffcc00;
-      border: none;
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 18px;
+    .gallery-grid img:hover {
+        transform: scale(1.05);
     }
-  </style>
+
+    /* CONTACT */
+    .contact-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 15px 30px;
+        background: #25D366;
+        color: white;
+        font-size: 22px;
+        border-radius: 35px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #111;
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+        border-top: 2px solid #f1c40f;
+        font-size: 18px;
+    }
+</style>
 </head>
 <body>
-  <header>
-    <img src="https://drive.google.com/uc?export=view&id=1sqbqXcfPizpVOVTU8C66SD-q5Y1cLfKU" alt="Logo" />
-    <h1>Nirmal Enterprises</h1>
-  </header>
 
-  <!-- HERO SLIDER -->
-  <div class="hero">
-    <img class="slide active" src="https://drive.google.com/uc?export=view&id=1sqbqXcfPizpVOVTU8C66SD-q5Y1cLfKU" />
-    <img class="slide" src="https://drive.google.com/uc?export=view&id=1sqbqXcfPizpVOVTU8C66SD-q5Y1cLfKU" />
-    <img class="slide" src="https://drive.google.com/uc?export=view&id=1sqbqXcfPizpVOVTU8C66SD-q5Y1cLfKU" />
-  </div>
+<header>
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/logo%20(1).png" alt="Logo" />
+    <h1>Nirmal Enterprise</h1>
+    <p>Professional Shuttering & Centering Contractor</p>
+</header>
 
-  <!-- SERVICES -->
-  <section class="services">
-    <h2>Our Construction Services</h2>
-    <div class="service-boxes">
-      <div class="box">Shuttering Work</div>
-      <div class="box">Centering Work</div>
-      <div class="box">Slab Work</div>
-      <div class="box">Beam & Column Work</div>
-      <div class="box">Formwork Material Supply</div>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Us</h2>
+    <p>
+        We specialize in premium shuttering and centering work for commercial & residential projects.
+        With years of experience, we ensure strong, safe and high‑quality construction support.
+    </p>
+</section>
+
+<section id="services" class="services-list">
+    <h2 class="section-title">Our Services</h2>
+    <p>
+        ✔ Shuttering Work<br>
+        ✔ Centering Work<br>
+        ✔ Column, Beam & Slab Work<br>
+        ✔ Complete Building Support Structure<br>
+        ✔ Commercial & Residential Projects
+    </p>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2 class="section-title">Project Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/8f3da240bd6299144c6f98ca8e39d2f3.jpg" />
+        <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/construction-site-sunset_23-2152006125.jpg" />
+        <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/j-p-centering-works-tambaram-west-chennai-centering-work-a217r.jpg" />
+        <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/la-cornice-monolitica-di-una-nuova-casa-in-costruzione-sul-vonn-della-gru-e-il-cielo-blu_220838-127.jpg" />
+        <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/refs/heads/main/update10.jpg" />
     </div>
-  </section>
+</section>
 
-  <!-- CONTACT FORM -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required /><br />
-      <input type="email" placeholder="Your Email" required /><br />
-      <textarea rows="5" placeholder="Your Message"></textarea><br />
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<section id="contact" class="about">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Call / WhatsApp for any shuttering & centering work</p>
+    <a class="contact-btn" href="https://wa.me/918956330327" target="_blank">WhatsApp</a>
+</section>
 
-  <script>
-    let slides = document.querySelectorAll('.slide');
-    let index = 0;
-    function changeSlide() {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }
-    setInterval(changeSlide, 3000);
-  </script>
+<footer>
+    © 2025 Nirmal Enterprise — All Rights Reserved
+</footer>
+
 </body>
-        </html>
-        
+</html>
